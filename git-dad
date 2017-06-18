@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# git-dad: punish your typos with a dad joke.
+
+set -e
+
+git add "$@"
+if [ $# != 0 ]; then curl https://icanhazdadjoke.com/ && echo; fi
